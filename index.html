@@ -73,7 +73,7 @@
                                     <div class="_140-image"></div>
                                 </div>
                                 <div class="_140-cta"><a data-w-id="3de0f6b5-dbc8-2958-cfcb-9124cdba2e62"
-                                        style="opacity:1" href="#" class="_140-cta btn w-button">Open invitation</a><img
+                                        style="opacity:1" id="playButton" href="#" class="_140-cta btn w-button">Open invitation</a><img
                                         src="https://assets-global.website-files.com/63b4c49f8d3f5fdf2e48ed96/63b4c985ef596043e8379048_arrow.svg"
                                         height="" alt="" class="_140-cta-arrow" /><img class="_140-learn-more-text"
                                         src="https://assets-global.website-files.com/63b4c49f8d3f5fdf2e48ed96/63b4cd77e06df84126f6a1c8_View%20Menu%20-%20View%20Menu%20-%20View%20Menu%20-%20(1).png"
@@ -82,6 +82,8 @@
                                         sizes="125px" data-w-id="5e1c8769-92c5-eec9-f5b5-2f3d0c95c0f2"
                                         srcset="https://assets-global.website-files.com/63b4c49f8d3f5fdf2e48ed96/63b4cd77e06df84126f6a1c8_View%20Menu%20-%20View%20Menu%20-%20View%20Menu%20-%20(1)-p-500.png 500w, https://assets-global.website-files.com/63b4c49f8d3f5fdf2e48ed96/63b4cd77e06df84126f6a1c8_View%20Menu%20-%20View%20Menu%20-%20View%20Menu%20-%20(1).png 500w" />
                                 </div>
+                               
+                                <audio id="audioPlayer" src="./happy-birthday-to-you-piano-version-13976.mp3"></audio>
                             </div>
                         </div>
                     </div>
@@ -140,6 +142,12 @@
                         </style>
                     </div>
                     <div class="track-horizontal-alt">
+                        <div class="cta-heading sub">0/0 Tax</div>
+                        <div class="cta-heading sub">Revoked</div>
+                        <div class="cta-heading sub">Lp Burn</div>
+                        <div class="cta-heading sub">0/0 Tax</div>
+                        <div class="cta-heading sub">Revoked</div>
+                        <div class="cta-heading sub">Lp Burn</div>
                         <div class="cta-heading sub">0/0 Tax</div>
                         <div class="cta-heading sub">Revoked</div>
                         <div class="cta-heading sub">Lp Burn</div>
@@ -435,7 +443,25 @@
 
     </script>
 
+<script>
+    // Get references to the button and audio element
+    var playButton = document.getElementById('playButton');
+    var audioPlayer = document.getElementById('audioPlayer');
 
+    // Add click event listener to the button
+    playButton.addEventListener('click', function () {
+        // Check if the audio is currently paused
+        if (audioPlayer.paused) {
+            // If paused, play the audio
+            audioPlayer.play();
+            playButton.innerHTML = 'Pause Audio';
+        } else {
+            // If playing, pause the audio
+            audioPlayer.pause();
+            playButton.innerHTML = 'Play Audio';
+        }
+    });
+</script>
    
 
 </body>
